@@ -1,5 +1,7 @@
 // Rechenlogik des Taschenrechners
 
+const btn = document.querySelectorAll(".buttons");
+
 // Rechenfunktionen 
 
 function add(a, b) {
@@ -36,3 +38,9 @@ let zahl1 = "";
 let zahl2 = "";
 let operator = "";
 
+btn.forEach((btn) => {
+
+btn.addEventListener("click", () => {
+    alert(btn.textContent);
+});
+});
