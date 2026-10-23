@@ -1,6 +1,7 @@
 // Rechenlogik des Taschenrechners
 
 const btn = document.querySelectorAll(".buttons");
+const display = document.querySelector("#display");
 
 // Rechenfunktionen 
 
@@ -41,6 +42,7 @@ let operator = "";
 btn.forEach((btn) => {
 
 btn.addEventListener("click", () => {
-    alert(btn.textContent);
-});
+    display.textContent += btn.textContent;
+    
+  });
 });
