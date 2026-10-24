@@ -42,7 +42,17 @@ let operator = "";
 btn.forEach((btn) => {
 
 btn.addEventListener("click", () => {
-    display.textContent += btn.textContent;
-    
+    if (btn.textContent === "+" || btn.textContent === "-" || btn.textContent === "*" || btn.textContent === "/") {
+        operator += btn.textContent;
+        display.textContent = operator;
+    } else if (operator === "") {
+       zahl1 += btn.textContent;
+       display.textContent = zahl1;
+    } else if (operator === "") { 
+        zahl2 += btn.textContent;
+        display.textContent = zahl2;
+    }
   });
 });
+
+
